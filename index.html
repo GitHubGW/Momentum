@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Momentum</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1>Momentum</h1>
+
+    <!-- ##### 현재 시간 ##### -->
+    <div class="js-clock">
+      <h1 class="js-date"></h1>
+      <h1 class="js-title">00:00</h1>
+    </div>
+
+    <!-- ##### 사용자 이름 ##### -->
+    <form class="js-form active">
+      <input type="text" placeholder="What is your name?" />
+    </form>
+    <h4 class="js-greeting active"></h4>
+
+    <!-- ##### 투두 리스트 ##### -->
+    <form class="js-toDoForm">
+      <input type="text" placeholder="Write a to do" />
+    </form>
+    <ul class="js-toDoList"></ul>
+
+    <!-- Custom JS -->
+    <script src="clock.js"></script>
+    <script src="greeting.js"></script>
+    <script src="todo.js"></script>
+    <script src="background.js"></script>
+    <script src="weather.js"></script>
+  </body>
+</html>
