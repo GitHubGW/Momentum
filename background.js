@@ -7,7 +7,7 @@ function handleImgLoad(){
 
 function paintImage(imgNumber){
   const image=new Image();
-  console.log(image);
+  // console.log(image);
   image.src=`images/background${imgNumber}.jpg`;
   image.classList.add("bgImage");
   body.appendChild(image);
