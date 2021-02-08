@@ -13,9 +13,9 @@
 
 ## Functions
 * Real-time Clock <br>
-* Save user information <br>
+* Save User Information <br>
 * To Do List <br>
-* Random Background Image <br>
+* Random Background Images <br>
 * Location based Weather
 
 
