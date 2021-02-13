@@ -1,6 +1,6 @@
 # Momentum-Clone
 
-## Tools
+## Technologies
 * HTML5 <br>
 * CSS3 <br>
 * Vanilla JS
@@ -11,8 +11,8 @@
 * Using API <br>
 * Cloning Momentum
 
-## Functions
-* Real-time Clock <br>
+## Features
+* Real-Time Clock <br>
 * Save User Information <br>
 * To Do List <br>
 * Random Background Images <br>
