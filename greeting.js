@@ -5,6 +5,14 @@ const USER_LS="currentUser";
 const CLASS_ACTIVE="active";
 
 
+function editName(){
+  console.log("editName Func");
+  form.classList.add('active');
+  greeting.classList.remove('active');
+  localStorage.removeItem(USER_LS);
+  input.value="";
+}
+
 function saveName(text){
   localStorage.setItem(USER_LS, text);
   // paintGreeting(localStorage.getItem(USER_LS));
@@ -26,23 +34,21 @@ function askForName(){
 function paintGreeting(text){
   form.classList.remove(CLASS_ACTIVE);
   greeting.classList.add(CLASS_ACTIVE);
-  greeting.innerText=`Hello ${text}`;
+  greeting.innerText=`Hello ${text}🖐`;
 }
 
 function loadName(){
   const currentUser=localStorage.getItem(USER_LS);
 
   if(currentUser === null){
-    // console.log("첫 번째 폼 값 없음");
     askForName();
   }else if(currentUser !== null){
-    // console.log("첫 번째 폼 값 있음");
     paintGreeting(currentUser);
   };
 }
 
 function init(){
-  // console.log("init함수 실행");
+  greeting.addEventListener('click',editName);
   loadName();
 }
 init();

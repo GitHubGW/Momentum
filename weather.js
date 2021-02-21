@@ -1,24 +1,29 @@
 const weather=document.querySelector('.js-weather');
+const weatherTemp=document.querySelector('.js-weather-temp');
+const weatherMain=document.querySelector('.js-weather-main');
 
 const API_KEY='ff26d804d0d9d838fc3e57227eed4bcc';
 const COORDS='coords';
 
 
 function getWeather(lat, lon){
-  console.log(lat, lon);
+  // console.log(lat, lon);
   fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`)
     .then(function(response){
-      console.log("fetch 성공");
+      // console.log("fetch 성공");
       return response.json();
     }).then(function(json){
-      console.log(json);
-      const temperature=json.main.temp;
+      console.log(json);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+      const temperature=Math.floor(json.main.temp);
       const place=json.name;
-      console.log(temperature);
-      console.log(place);
-      weather.innerText=`${temperature}, ${place}`;
+      const country=json.sys.country;
+      const main=json.weather[0].main;
+
+      weatherTemp.innerText=`${temperature}°`;
+      weatherMain.innerText=`${main}`;
+      weather.innerText=`${place}, ${country}`;
     }).catch(function(error){
-      console.log("fetch 실패");
+      // console.log("fetch 실패");
     });
 }
 
@@ -27,7 +32,7 @@ function saveCoords(coordsObj){
 }
 
 function handleGeoError(position){
-  // console.log("handleGeo실패");
+  console.log("handleGeo실패");
 }
 
 function handleGeoSuccess(position){
@@ -50,12 +55,9 @@ function askForCoords(){
 function loadCoords(){
   const loadedCoords=localStorage.getItem(COORDS);
   if(loadedCoords === null){
-    // console.log("loadedCoords 없음");
     askForCoords();
   }else if(loadedCoords !== null){
-    // console.log("loadedCoords 있음");
     const parsedCoords=JSON.parse(loadedCoords);
-    console.log(parsedCoords);
     getWeather(parsedCoords.latitude, parsedCoords.longitude);
   }
 }

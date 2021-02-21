@@ -1,15 +1,134 @@
-body{
-  background-color: #dfe6e9;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
 
+body{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
+h1,h2,h3,h4,h5{
+  margin: 0;
+}
+.container{
+  width: 320px;
+  text-align: center;
+}
+.js-clock{
+  color:white;
+  text-align: center;
+}
+.js-date{
+  font-size:20px;
+  margin-bottom: 35px;
+  font-weight: 200;
+}
+.js-title{
+  font-size:80px;
+  font-weight: 200;
+}
+.js-form input,
+.js-toDoForm input{
+  border:none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 2px solid white;
+  color:white;
+  width: 90%;
+  padding-left:20px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+.js-toDoForm{
+  margin-bottom: 0px;
+}
+.js-form input::placeholder,
+.js-toDoForm input::placeholder{
+  color:white;
+  transition: 0.8s;
+}
+.js-form input:focus::placeholder,
+.js-toDoForm input:focus::placeholder{
+  opacity: 0;
+}
 .js-form,
 .js-greeting{
   display: none;
 }
-
 .js-form.active,
 .js-greeting.active{
   display: block;
+}
+.js-greeting.active{
+  cursor: pointer;
+  color: white;
+  font-weight: 400;
+  height: 50px;
+  font-size: 28px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+.weather-container{
+  position: absolute;
+  top:20px;
+  right:30px;
+  color:white;
+}
+.fa-cloud-sun{
+  font-size:45px;
+}
+.js-weather-temp{
+  font-size:35px;
+  margin-left: 5px;
+  vertical-align: -4px;
+}
+.js-weather{
+  font-size: 12px;
+}
+.js-weather-main{
+  display: block;
+  font-style: normal;
+  font-size: 20px;
+}
+.js-toDoList{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 10px;
+}
+.js-toDoList li{
+  color:white;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom:10px;
+}
+.js-toDoList li span{
+  width: 140px;
+  display: inline-block;
+  text-align: left;
+  padding-left: 10px;
+}
+.js-toDoList li strong{
+  cursor: pointer;
+  font-size: 18px;
+}
+.js-toDoList li button{
+  border:none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 18px;
 }
 
 .bgImage{

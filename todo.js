@@ -5,27 +5,30 @@ const toDoList=document.querySelector('.js-toDoList');
 const TODOS_LS="toDos";
 let toDosArr=[];
 
+function checkToDo(event){
+  const targetBtn=event.target;
+  const targetLi=targetBtn.parentNode;
+  const span=targetLi.childNodes[1];
+  if(span.style.textDecoration==="line-through"){
+    span.style.textDecoration="none";
+  }else{
+    span.style.textDecoration="line-through";
+  }
+}
 
 function deleteToDo(event){
-  // console.log(event);
-  // console.dir(event.target);
   const targetBtn=event.target;
   const targetLi=targetBtn.parentNode;
 
   toDoList.removeChild(targetLi);
-  // console.log("toDosArr",toDosArr);
   
   const cleanToDos=toDosArr.filter(function(toDosArr){
-    // console.log(toDosArr.id);
-    // console.log(targetLi.id);
     return toDosArr.id !== parseInt(targetLi.id);
   });
-  console.log("cleanToDos",cleanToDos);
-  
+
   toDosArr=cleanToDos;
   saveToDos();
 }
-
 
 function saveToDos(){
   localStorage.setItem(TODOS_LS, JSON.stringify(toDosArr));
@@ -35,10 +38,14 @@ function paintToDo(text){
   const li=document.createElement('li');
   const span=document.createElement('span');
   const delBtn=document.createElement('button');
+  const strong=document.createElement('strong');
 
-  delBtn.innerText="❌";
-  delBtn.addEventListener('click',deleteToDo);
+  strong.innerText="✅";
+  delBtn.innerText="❎";
   span.innerText=text;
+  strong.addEventListener('click',checkToDo);
+  delBtn.addEventListener('click',deleteToDo);
+  li.appendChild(strong);
   li.appendChild(span);
   li.appendChild(delBtn);
   toDoList.appendChild(li);
