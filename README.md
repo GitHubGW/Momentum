@@ -1,7 +1,7 @@
 # Momentum-Clone
 
 ## 🔗 Demo
-https://githubgw.github.io/Momentum-Clone/
+https://githubgw.github.io/Momentum-Clone
 
 ## 🔥 Technologies
 * HTML5 <br>
