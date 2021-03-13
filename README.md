@@ -1,21 +1,22 @@
 # Momentum-Clone
 
-## Technologies
+## 🔗 Demo
+https://githubgw.github.io/Momentum-Clone/
+
+## 🔥 Technologies
 * HTML5 <br>
 * CSS3 <br>
 * Vanilla JS
 
-## Goals
-* Practice Vanilla JS <br>
-* Understanding Local Storage <br>
-* Using API <br>
-* Cloning Momentum
+## 🌈 Goals
+- [x] Practice Vanilla JS <br>
+- [x] Understanding Local Storage <br>
+- [x] Using API <br>
+- [x] Cloning Momentum
 
-## Features
-* Real-Time Clock <br>
-* Save User Information <br>
-* To Do List <br>
-* Random Background Images <br>
-* Location based Weather
-
-
+## ✨ Features
+- [x] Real-Time Clock <br>
+- [x] Save User Information <br>
+- [x] To Do List <br>
+- [x] Random Background Images <br>
+- [x] Location based Weather
