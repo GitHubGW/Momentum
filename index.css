@@ -149,3 +149,28 @@ h1,h2,h3,h4,h5{
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 768px) { 
+  .js-title { 
+    font-size: 60px;
+  }
+  .js-date{
+    font-size: 16px;
+  }
+  .js-form input, 
+  .js-toDoForm input{
+    width: 80%;
+  }
+  .js-form input::placeholder,
+  .js-toDoForm input::placeholder{
+    font-size: 15px;
+  }
+  .weather-container{
+    top: 10px;
+    right: 5px;
+    transform:scale(0.75);
+  }
+  .js-weather{
+    font-size: 14px;
+  }
+} 
