@@ -10,7 +10,7 @@ https://githubgw.github.io/Momentum-Clone
 
 ## ✅ Packages
 - [x] Javascript   
-- [x] localStorage   
+- [x] Local Storage   
 - [x] AJAX    
 - [x] JSON  
 - [x] DOM
