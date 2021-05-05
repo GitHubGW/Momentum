@@ -4,8 +4,8 @@
 https://githubgw.github.io/Momentum-Clone
 
 ## 🖥 Preview
-<img src="/preview/preview1.png">
-<img src="/preview/preview2.png">
+<img src="preview1.png">
+<img src="preview2.png">
 
 ## 🔥 Stack
 ### Front-end
